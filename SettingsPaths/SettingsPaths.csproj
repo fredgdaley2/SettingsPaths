@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageReadmeFile>README.MD</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>SettingsPaths</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<PackageProjectUrl>https://github.com/fredgdaley2/SettingsPaths</PackageProjectUrl>
+		<PackageTags>settings,tool,dotnet,appsettings,octopus deploy,CI/CD,json,configuration,application-settings,jsonpath</PackageTags>
+		<AssemblyVersion>1.0.1.1</AssemblyVersion>
+		<FileVersion>1.0.1.1</FileVersion>
+		<Version>1.0.1</Version>
+		<Description>Reads Appsettings.json or supplied json configuration file and creates a settingsPaths.csv file with the configuration paths and values for entering in tools like Octopus Deploy</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.MD">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="nupkg\" />
+	</ItemGroup>
+
+</Project>
